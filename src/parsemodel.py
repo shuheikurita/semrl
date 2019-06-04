@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from gen_minibatches import *
-from util_std import *
-import numpy as np
+def divwoe(a,b,e=0.0):
+    try:
+        return float(a)/b
+    except ZeroDivisionError:
+        return e
+
 
 import logging
 logger = logging.getLogger(__name__)
