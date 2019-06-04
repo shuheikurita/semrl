@@ -10,9 +10,9 @@ Tensorflow
 ### Trainging
 #### Requirements
 - This requires the semantic dependency parsing datasets:
-https://catalog.ldc.upenn.edu/LDC2016T10
+  - https://catalog.ldc.upenn.edu/LDC2016T10
 - The model also needs pretrained word mebedding vectors such as GloVe.
-http://nlp.stanford.edu/data/glove.6B.zip
+  - http://nlp.stanford.edu/data/glove.6B.zip
 
 (Too be updated...)
 
