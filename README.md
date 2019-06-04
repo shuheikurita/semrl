@@ -14,7 +14,7 @@ Tensorflow
 - The model also needs pretrained word mebedding vectors such as GloVe.
   - http://nlp.stanford.edu/data/glove.6B.zip
 
-(Too be updated...)
+(To be updated...)
 
 ## Updated soon
 - Usage for training.
