@@ -6,7 +6,7 @@ Tensorflow
 
 ## Usage
 ### Parsing
-*We will publish off-the-shelve model soon.*
+*We will publish off-the-shelve models soon.*
 ### Trainging
 
 
