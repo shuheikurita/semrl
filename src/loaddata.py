@@ -154,6 +154,7 @@ class Datasets:
     max_trans=10
     max_words_nn=None
     max_preds_nn=None
+    max_words_input=None
 
     # expanding dataset
     inputs_wid=None
@@ -311,7 +312,7 @@ class Datasets:
         embmat=[]
         with codecs.open(input_file,"r","utf8") as csvfile:
             #reader = csv.reader(csvfile, delimiter='\t')
-            reader = unicode_csv_reader(csvfile, delimiter=' ')
+            reader = unicode_csv_reader(csvfile, delimiter=' ', quoting=csv.QUOTE_NONE)
             countword=0
             for row in reader:
                 try:
@@ -530,10 +531,16 @@ def prune_vocab_w_emb(idv,embmat,vocab,specials=[],minfreq=0):
             #print("SKIP: "+k+" is already in idv...")
             pass
         elif v<minfreq:
-            print("UNK: ",k,v)
+            try:
+                print("UNK: ",k,v)
+            except:
+                pass
             unk.add(k)
         else:
-            print("ADD: ",k,v)
+            try:
+                print("ADD: ",k,v)
+            except:
+                pass
             add.add(k)
             idv[k]=count
             count+=1
@@ -869,7 +876,7 @@ if __name__ == "__main__":
         data.genemb_wo_emb(dim,minfreq)
 
     if not DEBUG:
-        data.save_conll_sem(params["dataset"][0])
+        data.save_conll_sem(params["datapkl"][0])
         data.init_labl_sets()
         dump_emb(data,params["datanpy"][0])
 
