@@ -2,10 +2,13 @@
 Semantic dependency parser with reinforcement learning.
 
 ## Requirements
+Tensorflow
 
 ## Usage
 ### Parsing
+*We will publish off-the-shelve model soon.*
 ### Trainging
+
 
 ## Updated soon
 - Usage for training.
