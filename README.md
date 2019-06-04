@@ -35,7 +35,7 @@ path_to_psd_dev \
 Note that you don't need to parse full of the Glove vectors. Just prune uncommon words.
 
 #### Train & Dev
-This is an example of training.
+This is an example of training of DM formalism with supervised learning.
 ```
 python src/semrl.py \
     --train --parsing \
