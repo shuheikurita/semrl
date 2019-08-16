@@ -14,6 +14,7 @@ Tensorflow
   - https://catalog.ldc.upenn.edu/LDC2016T10
 - The model also needs pretrained word mebedding vectors such as GloVe.
   - http://nlp.stanford.edu/data/glove.6B.zip
+
 #### Preprocessing data
 Firstly you need to prepare your datasets with embedding vectors as `data.pkl`.
 ```
@@ -31,8 +32,10 @@ path_to_pas_dev \
 path_to_psd_train \
 path_to_psd_dev \
 ```
+Note that you don't need to parse full of the Glove vectors. Just prune uncommon words.
+
 #### Train & Dev
-This is an example of training.
+This is an example of training of DM formalism with supervised learning.
 ```
 python src/semrl.py \
     --train --parsing \
